@@ -28,7 +28,7 @@ public abstract class OtherStockItems implements ISell {
     }
 
     public double calculateMarkUp(){
-        return this.purchasedForPrice - this.sellPrice;
+        return this.sellPrice - this.purchasedForPrice;
     }
 
 }
