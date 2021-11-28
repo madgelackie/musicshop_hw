@@ -25,6 +25,18 @@ public abstract class Instrument implements ISell {
         return sellPrice;
     }
 
+    public void setCategory(InstrumentCategory category) {
+        this.category = category;
+    }
+
+    public void setPurchasedForPrice(double purchasedForPrice) {
+        this.purchasedForPrice = purchasedForPrice;
+    }
+
+    public void setSellPrice(double sellPrice) {
+        this.sellPrice = sellPrice;
+    }
+
     public double calculateMarkUp(){
         return this.sellPrice - this.purchasedForPrice;
     }

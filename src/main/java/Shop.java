@@ -17,12 +17,30 @@ public class Shop {
         this.stock = stock;
     }
 
-    public void addStock(ISell stockItem){
+    public void addStock(ISell stockItem) {
         this.stock.add(stockItem);
     }
 
-    public void removeStock(ISell stockItem){
+    public void removeStock(ISell stockItem) {
         this.stock.remove(stockItem);
     }
 
+    public double totalStockCost() {
+        double totalCost = this.stock.stream().mapToDouble(ISell::getPurchasedForPrice).sum();
+        return totalCost;
+    }
+
+    public double totalPotentialSales(){
+        double allSales = this.stock.stream().mapToDouble(ISell::getSellPrice).sum();
+        return allSales;
+    }
+
 }
+
+
+
+
+//    public double totalStockCost(){
+//
+//    }
+

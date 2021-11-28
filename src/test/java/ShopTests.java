@@ -37,5 +37,29 @@ public class ShopTests {
         assertEquals(1, shop.getStock().size());
     }
 
+    @Test
+    public void checkTotalStockCost(){
+        shop.addStock(guitar);
+        shop.addStock(guitar);
+        shop.addStock(guitarStrings);
+        assertEquals(152.50, shop.totalStockCost(), 0.01);
+    }
+
+    @Test
+    public void checkTotalPotentialSales() {
+        shop.addStock(guitar);
+        shop.addStock(guitar);
+        shop.addStock(guitarStrings);
+        assertEquals(323.25, shop.totalPotentialSales(), 0.01);
+    }
+
+    @Test
+    public void checkMaxProfit(){
+        shop.addStock(guitar);
+        shop.addStock(guitar);
+        shop.addStock(guitarStrings);
+        assertEquals(170.75, shop.maxProfit(), 0.01);
+    }
+
 
 }
