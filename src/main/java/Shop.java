@@ -35,6 +35,10 @@ public class Shop {
         return allSales;
     }
 
+    public double maxProfit(){
+        return totalPotentialSales() - totalStockCost();
+    }
+
 }
 
 
