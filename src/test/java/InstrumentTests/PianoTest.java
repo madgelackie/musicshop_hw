@@ -1,3 +1,5 @@
+package InstrumentTests;
+
 import Instruments.InstrumentCategory;
 import Instruments.Piano;
 import Instruments.PianoType;

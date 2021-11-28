@@ -1,6 +1,8 @@
 package OtherStock;
 
-public abstract class OtherStockItems {
+import Behaviours.ISell;
+
+public abstract class OtherStockItems implements ISell {
     private double purchasedForPrice;
     private double sellPrice;
 
@@ -25,5 +27,8 @@ public abstract class OtherStockItems {
         this.sellPrice = sellPrice;
     }
 
+    public double calculateMarkUp(){
+        return this.purchasedForPrice - this.sellPrice;
+    }
 
 }

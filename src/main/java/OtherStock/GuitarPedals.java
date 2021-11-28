@@ -1,26 +1,13 @@
 package OtherStock;
 
-import Behaviours.ISell;
-
-public class GuitarPedals implements ISell {
-    private double purchasedForPrice;
-    private double sellPrice;
+public class GuitarPedals extends OtherStockItems {
     private String name;
     private String effect;
 
     public GuitarPedals(double purchasedForPrice, double sellPrice, String name, String effect) {
-        this.purchasedForPrice = purchasedForPrice;
-        this.sellPrice = sellPrice;
+        super(purchasedForPrice, sellPrice);
         this.name = name;
         this.effect = effect;
-    }
-
-    public double getPurchasedForPrice() {
-        return purchasedForPrice;
-    }
-
-    public double getSellPrice() {
-        return sellPrice;
     }
 
     public String getName() {
@@ -31,7 +18,4 @@ public class GuitarPedals implements ISell {
         return effect;
     }
 
-    public double calculateMarkUp(){
-        return this.sellPrice - this.purchasedForPrice;
-    }
 }

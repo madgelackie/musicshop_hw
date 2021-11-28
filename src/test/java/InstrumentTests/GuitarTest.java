@@ -1,3 +1,5 @@
+package InstrumentTests;
+
 import Instruments.Guitar;
 import Instruments.GuitarString;
 import Instruments.GuitarType;

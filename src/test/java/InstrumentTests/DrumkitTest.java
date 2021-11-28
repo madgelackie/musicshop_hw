@@ -1,3 +1,5 @@
+package InstrumentTests;
+
 import Instruments.Drumkit;
 import Instruments.InstrumentCategory;
 import org.junit.Before;
